@@ -25,7 +25,7 @@ enum AppRoute {
 // ------------------------------------------
 // feature나 특정 단위로 묶어서
 // 해당 단위의 라우팅들만 설정하는 추상 객체
-abstract class AppPath {
+abstract class WowPath {
   static final List<GoRoute> routes = [
     GoRoute(
       path: AppRoute.todo.path,
