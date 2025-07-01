@@ -1,5 +1,10 @@
 import 'package:dalemy_ex/features/feature/presentation/create/page/todo_page_root.dart';
 import 'package:dalemy_ex/features/feature/presentation/todo_page2.dart';
+import 'package:dalemy_ex/features/test/main/home_page.dart';
+import 'package:dalemy_ex/features/test/main/my_page.dart';
+import 'package:dalemy_ex/features/test/main/schedule_page.dart';
+import 'package:dalemy_ex/features/test/main/wow_board_page.dart';
+import 'package:dalemy_ex/features/test/view/main_test.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -7,6 +12,8 @@ import 'package:go_router/go_router.dart';
 final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
 final routes = [
+  // RootTab을 첫 화면으로 설정
+  RootTabPath.shellRoute,
   // 라우터들
   ...AppPath.routes,
 ];
@@ -14,12 +21,57 @@ final routes = [
 // AppRoute들을 enum으로 정리
 enum AppRoute {
   todo(path: '/todo', name: 'todo'),
-  todo2(path: '/todo2', name: 'todo2');
+  todo2(path: '/todo2', name: 'todo2'),
+  home(path: '/home', name: 'home'),
+  schedule(path: '/schedule', name: 'schedule'),
+  board(path: '/board', name: 'board'),
+  mypage(path: '/mypage', name: 'mypage');
 
   final String path;
   final String name;
 
   const AppRoute({required this.path, required this.name});
+}
+
+abstract class RootTabPath {
+  static final ShellRoute shellRoute = ShellRoute(
+    navigatorKey: _shellNavigatorKey,
+    builder: (context, state, child) {
+      return RootTab(child);
+    },
+    routes: _routes,
+  );
+
+  static final List<GoRoute> _routes = [
+    GoRoute(
+      path: AppRoute.home.path,
+      name: AppRoute.home.name,
+      builder: (context, state) {
+        return const HomePage();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.schedule.path,
+      name: AppRoute.schedule.name,
+      builder: (context, state) {
+        return const SchedulePage();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.board.path,
+      name: AppRoute.board.name,
+      builder: (context, state) {
+        return const WowBoardPage();
+      },
+    ),
+    GoRoute(
+      path: AppRoute.mypage.path,
+      name: AppRoute.mypage.name,
+      builder: (context, state) {
+        return const MyPage();
+      },
+    ),
+  ];
 }
 
 // ------------------------------------------
