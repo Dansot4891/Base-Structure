@@ -77,6 +77,7 @@ class _RootTabState extends State<RootTab> {
   }
 
   void onTap(int index) {
+    if (currentIndex == index) return;
     setState(() {
       currentIndex = index;
     });
