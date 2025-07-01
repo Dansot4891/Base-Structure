@@ -1,6 +1,6 @@
 import 'package:dalemy_ex/features/feature/presentation/create/page/todo_page_root.dart';
 import 'package:dalemy_ex/features/feature/presentation/todo_page2.dart';
-import 'package:dalemy_ex/features/test/main/home_page.dart';
+import 'package:dalemy_ex/features/test/main/home/home_page.dart';
 import 'package:dalemy_ex/features/test/main/my_page.dart';
 import 'package:dalemy_ex/features/test/main/schedule_page.dart';
 import 'package:dalemy_ex/features/test/main/wow_board_page.dart';
@@ -43,6 +43,10 @@ abstract class RootTabPath {
   );
 
   static final List<GoRoute> _routes = [
+    GoRoute(
+      path: '/', // 루트 경로 추가
+      redirect: (context, state) => AppRoute.home.path,
+    ),
     GoRoute(
       path: AppRoute.home.path,
       name: AppRoute.home.name,

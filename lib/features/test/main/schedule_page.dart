@@ -5,6 +5,7 @@ class SchedulePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('SchedulePage');
     return const Scaffold(
       body: Center(
         child: Text('SchedulePage'),

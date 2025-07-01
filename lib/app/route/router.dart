@@ -10,7 +10,7 @@ class AppRouter {
     final router = GoRouter(
       routes: routes,
       navigatorKey: rootNavigatorKey,
-      initialLocation: AppRoute.home.path, // RootTab의 홈 화면으로 시작
+      initialLocation: '/', // 루트 경로로 시작
     );
 
     return router;

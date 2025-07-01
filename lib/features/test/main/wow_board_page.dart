@@ -5,6 +5,7 @@ class WowBoardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('WowBoardPage');
     return const Scaffold(
       body: Center(
         child: Text('WowBoardPage'),
