@@ -59,6 +59,32 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   HomeTitleRow(onTap: () {}, title: '오늘의 와우'),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: List.generate(
+                        5,
+                        (index) {
+                          return Container(
+                            width: 148,
+                            height: 148,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                  'https://www.palnews.co.kr/news/photo/201801/92969_25283_5321.jpg',
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            margin: const EdgeInsets.only(right: 12),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  HomeTitleRow(onTap: () {}, title: '오늘의 와우'),
                   HomeTodayBox(
                     content:
                         'TodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayTodayToday',
