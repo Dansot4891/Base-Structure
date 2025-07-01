@@ -1,5 +1,5 @@
-import 'package:dalemy_ex/feature/data/data_source/remote/todo_remote_data_source.dart';
-import 'package:dalemy_ex/feature/data/model/todo_model.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/remote/todo_remote_data_source.dart';
+import 'package:dalemy_ex/features/feature/data/model/todo_model.dart';
 import 'package:dio/dio.dart' hide Headers;
 import 'package:retrofit/retrofit.dart';
 

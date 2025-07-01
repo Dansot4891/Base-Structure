@@ -1,10 +1,11 @@
-import 'package:dalemy_ex/feature/data/data_source/remote/todo_remote_data_source.dart';
-import 'package:dalemy_ex/feature/data/mapper/todo_mapper.dart';
-import 'package:dalemy_ex/feature/domain/entity/todo_entity.dart';
-import 'package:dalemy_ex/feature/domain/repository/todo_repository.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/local/todo_local_data_source.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/remote/todo_remote_data_source.dart';
+import 'package:dalemy_ex/features/feature/data/mapper/todo_mapper.dart';
+import 'package:dalemy_ex/features/feature/domain/entity/todo_entity.dart';
+import 'package:dalemy_ex/features/feature/domain/repository/todo_repository.dart';
 
 class TodoRepositoryImpl implements TodoRepository {
-  final TodoRemoteDataSource _dataSource;
+  final TodoLocalDataSource _dataSource;
 
   TodoRepositoryImpl(this._dataSource);
 

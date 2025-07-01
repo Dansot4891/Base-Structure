@@ -1,10 +1,10 @@
-import 'package:dalemy_ex/feature/data/data_source/local/todo_local_data_source.dart';
-import 'package:dalemy_ex/feature/data/data_source/remote/todo_remote_data_source.dart';
-import 'package:dalemy_ex/feature/data/data_source/remote/todo_remote_data_source_impl.dart';
-import 'package:dalemy_ex/feature/data/data_source/local/todo_local_data_source_impl.dart';
-import 'package:dalemy_ex/feature/data/data_source/repository_impl/todo_repository_impl.dart';
-import 'package:dalemy_ex/feature/domain/repository/todo_repository.dart';
-import 'package:dalemy_ex/feature/domain/use_case/get_todos_use_case.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/local/todo_local_data_source.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/local/todo_local_data_source_impl.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/remote/todo_remote_data_source.dart';
+import 'package:dalemy_ex/features/feature/data/data_source/remote/todo_remote_data_source_impl.dart';
+import 'package:dalemy_ex/features/feature/data/repository_impl/todo_repository_impl.dart';
+import 'package:dalemy_ex/features/feature/domain/repository/todo_repository.dart';
+import 'package:dalemy_ex/features/feature/domain/use_case/get_todos_use_case.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 

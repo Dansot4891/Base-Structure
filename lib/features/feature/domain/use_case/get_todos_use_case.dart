@@ -1,7 +1,7 @@
 import 'package:dalemy_ex/core/module/error/result.dart';
 import 'package:dalemy_ex/core/module/exception/app_exception.dart';
-import 'package:dalemy_ex/feature/domain/entity/todo_entity.dart';
-import 'package:dalemy_ex/feature/domain/repository/todo_repository.dart';
+import 'package:dalemy_ex/features/feature/domain/entity/todo_entity.dart';
+import 'package:dalemy_ex/features/feature/domain/repository/todo_repository.dart';
 
 // 하나의 기능을 담당하는 유스케이스
 // 관련 feature의 Repository를 가져와 하나의 기능만을 담당한다.

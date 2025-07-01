@@ -1,5 +1,5 @@
-import 'package:dalemy_ex/feature/presentation/page/todo_page_root.dart';
-import 'package:dalemy_ex/feature/presentation/todo_page2.dart';
+import 'package:dalemy_ex/features/feature/presentation/create/page/todo_page_root.dart';
+import 'package:dalemy_ex/features/feature/presentation/todo_page2.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -25,7 +25,7 @@ enum AppRoute {
 // ------------------------------------------
 // feature나 특정 단위로 묶어서
 // 해당 단위의 라우팅들만 설정하는 추상 객체
-abstract class WowPath {
+abstract class AppPath {
   static final List<GoRoute> routes = [
     GoRoute(
       path: AppRoute.todo.path,

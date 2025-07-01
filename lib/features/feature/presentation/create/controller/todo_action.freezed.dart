@@ -18,38 +18,38 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$TodoAction {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tapButton,
+    required TResult Function(int index) tapTodo,
     required TResult Function() tapButton2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? tapButton,
+    TResult? Function(int index)? tapTodo,
     TResult? Function()? tapButton2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tapButton,
+    TResult Function(int index)? tapTodo,
     TResult Function()? tapButton2,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(TapButton value) tapButton,
+    required TResult Function(TapTodo value) tapTodo,
     required TResult Function(TapButton2 value) tapButton2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TapButton value)? tapButton,
+    TResult? Function(TapTodo value)? tapTodo,
     TResult? Function(TapButton2 value)? tapButton2,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(TapButton value)? tapButton,
+    TResult Function(TapTodo value)? tapTodo,
     TResult Function(TapButton2 value)? tapButton2,
     required TResult orElse(),
   }) =>
@@ -78,70 +78,97 @@ class _$TodoActionCopyWithImpl<$Res, $Val extends TodoAction>
 }
 
 /// @nodoc
-abstract class _$$TapButtonImplCopyWith<$Res> {
-  factory _$$TapButtonImplCopyWith(
-          _$TapButtonImpl value, $Res Function(_$TapButtonImpl) then) =
-      __$$TapButtonImplCopyWithImpl<$Res>;
+abstract class _$$TapTodoImplCopyWith<$Res> {
+  factory _$$TapTodoImplCopyWith(
+          _$TapTodoImpl value, $Res Function(_$TapTodoImpl) then) =
+      __$$TapTodoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
 }
 
 /// @nodoc
-class __$$TapButtonImplCopyWithImpl<$Res>
-    extends _$TodoActionCopyWithImpl<$Res, _$TapButtonImpl>
-    implements _$$TapButtonImplCopyWith<$Res> {
-  __$$TapButtonImplCopyWithImpl(
-      _$TapButtonImpl _value, $Res Function(_$TapButtonImpl) _then)
+class __$$TapTodoImplCopyWithImpl<$Res>
+    extends _$TodoActionCopyWithImpl<$Res, _$TapTodoImpl>
+    implements _$$TapTodoImplCopyWith<$Res> {
+  __$$TapTodoImplCopyWithImpl(
+      _$TapTodoImpl _value, $Res Function(_$TapTodoImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of TodoAction
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$TapTodoImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$TapButtonImpl implements TapButton {
-  const _$TapButtonImpl();
+class _$TapTodoImpl implements TapTodo {
+  const _$TapTodoImpl(this.index);
+
+  @override
+  final int index;
 
   @override
   String toString() {
-    return 'TodoAction.tapButton()';
+    return 'TodoAction.tapTodo(index: $index)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$TapButtonImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$TapTodoImpl &&
+            (identical(other.index, index) || other.index == index));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, index);
+
+  /// Create a copy of TodoAction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TapTodoImplCopyWith<_$TapTodoImpl> get copyWith =>
+      __$$TapTodoImplCopyWithImpl<_$TapTodoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tapButton,
+    required TResult Function(int index) tapTodo,
     required TResult Function() tapButton2,
   }) {
-    return tapButton();
+    return tapTodo(index);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? tapButton,
+    TResult? Function(int index)? tapTodo,
     TResult? Function()? tapButton2,
   }) {
-    return tapButton?.call();
+    return tapTodo?.call(index);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tapButton,
+    TResult Function(int index)? tapTodo,
     TResult Function()? tapButton2,
     required TResult orElse(),
   }) {
-    if (tapButton != null) {
-      return tapButton();
+    if (tapTodo != null) {
+      return tapTodo(index);
     }
     return orElse();
   }
@@ -149,37 +176,45 @@ class _$TapButtonImpl implements TapButton {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(TapButton value) tapButton,
+    required TResult Function(TapTodo value) tapTodo,
     required TResult Function(TapButton2 value) tapButton2,
   }) {
-    return tapButton(this);
+    return tapTodo(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TapButton value)? tapButton,
+    TResult? Function(TapTodo value)? tapTodo,
     TResult? Function(TapButton2 value)? tapButton2,
   }) {
-    return tapButton?.call(this);
+    return tapTodo?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(TapButton value)? tapButton,
+    TResult Function(TapTodo value)? tapTodo,
     TResult Function(TapButton2 value)? tapButton2,
     required TResult orElse(),
   }) {
-    if (tapButton != null) {
-      return tapButton(this);
+    if (tapTodo != null) {
+      return tapTodo(this);
     }
     return orElse();
   }
 }
 
-abstract class TapButton implements TodoAction {
-  const factory TapButton() = _$TapButtonImpl;
+abstract class TapTodo implements TodoAction {
+  const factory TapTodo(final int index) = _$TapTodoImpl;
+
+  int get index;
+
+  /// Create a copy of TodoAction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TapTodoImplCopyWith<_$TapTodoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -223,7 +258,7 @@ class _$TapButton2Impl implements TapButton2 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tapButton,
+    required TResult Function(int index) tapTodo,
     required TResult Function() tapButton2,
   }) {
     return tapButton2();
@@ -232,7 +267,7 @@ class _$TapButton2Impl implements TapButton2 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? tapButton,
+    TResult? Function(int index)? tapTodo,
     TResult? Function()? tapButton2,
   }) {
     return tapButton2?.call();
@@ -241,7 +276,7 @@ class _$TapButton2Impl implements TapButton2 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tapButton,
+    TResult Function(int index)? tapTodo,
     TResult Function()? tapButton2,
     required TResult orElse(),
   }) {
@@ -254,7 +289,7 @@ class _$TapButton2Impl implements TapButton2 {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(TapButton value) tapButton,
+    required TResult Function(TapTodo value) tapTodo,
     required TResult Function(TapButton2 value) tapButton2,
   }) {
     return tapButton2(this);
@@ -263,7 +298,7 @@ class _$TapButton2Impl implements TapButton2 {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TapButton value)? tapButton,
+    TResult? Function(TapTodo value)? tapTodo,
     TResult? Function(TapButton2 value)? tapButton2,
   }) {
     return tapButton2?.call(this);
@@ -272,7 +307,7 @@ class _$TapButton2Impl implements TapButton2 {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(TapButton value)? tapButton,
+    TResult Function(TapTodo value)? tapTodo,
     TResult Function(TapButton2 value)? tapButton2,
     required TResult orElse(),
   }) {

@@ -1,4 +1,4 @@
-import 'package:dalemy_ex/feature/domain/entity/todo_entity.dart';
+import 'package:dalemy_ex/features/feature/domain/entity/todo_entity.dart';
 
 // Todo 화면에서 이용되는 데이터들을 담는 State
 class TodoState {

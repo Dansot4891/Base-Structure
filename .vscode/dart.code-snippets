@@ -1,0 +1,81 @@
+{
+  "Flutter Freezed Model": {
+    "prefix": "freezed",
+    "body": [
+      "import 'package:freezed_annotation/freezed_annotation.dart';",
+      "",
+      "part '${1:model_name}.freezed.dart';",
+      "part '${1:model_name}.g.dart';",
+      "",
+      "@freezed",
+      "class ${2:ModelName} with _$${2:ModelName} {",
+      "  const factory ${2:ModelName}({",
+      "    ${3:// TODO: Add fields}",
+      "  }) = _${2:ModelName};",
+      "",
+      "  factory ${2:ModelName}.fromJson(Map<String, dynamic> json) => _$${2:ModelName}FromJson(json);",
+      "}"
+    ],
+    "description": "Freezed 모델 클래스 생성"
+  },
+  "Flutter Model to Entity Mapper": {
+    "prefix": "mapper",
+    "body": [
+      "import '${1:model_file}.dart';",
+      "import '${2:entity_file}.dart';",
+      "",
+      "extension ${3:ModelName}Mapper on ${3:ModelName} {",
+      "  ${4:EntityName} toEntity() {",
+      "    return ${4:EntityName}(",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "extension ${4:EntityName}Mapper on ${4:EntityName} {",
+      "  ${3:ModelName} toModel() {",
+      "    return ${3:ModelName}(",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Model-Entity 매퍼 Extension 생성"
+  },
+  "Flutter JSON Serializable": {
+    "prefix": "json",
+    "body": [
+      "factory ${1:ClassName}.fromJson(Map<String, dynamic> json) => _$${1:ClassName}FromJson(json);",
+      "Map<String, dynamic> toJson() => _$${1:ClassName}ToJson(this);",
+    ],
+    "description": "json_serializable 기반 JSON 직렬화 클래스 생성"
+  },
+  "Flutter Repository": {
+    "prefix": "repository",
+    "body": [
+      "abstract class ${1:RepositoryName} {",
+      "  ${2:// TODO: Add methods}",
+      "}",
+      "",
+      "class ${1:RepositoryName}Impl implements ${1:RepositoryName} {",
+      "  const ${1:RepositoryName}Impl();",
+      "",
+      "  ${3:// TODO: Implement methods}",
+      "}"
+    ],
+    "description": "Repository 인터페이스와 구현체 생성"
+  },
+  "Flutter Data Source": {
+    "prefix": "datasource",
+    "body": [
+      "abstract class ${1:DataSourceName} {",
+      "  ${2:// TODO: Add methods}",
+      "}",
+      "",
+      "class ${1:DataSourceName}Impl implements ${1:DataSourceName} {",
+      "  const ${1:DataSourceName}Impl();",
+      "",
+      "  ${3:// TODO: Implement methods}",
+      "}"
+    ],
+    "description": "Data Source 인터페이스와 구현체 생성"
+  }
+} 
